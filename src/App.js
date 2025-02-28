@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+    return (
+        <div className='container'> //The word is class is reserved 
+                                     and as such className is used as an alternative.
+            <h1>My App</h1>
+        </div>
+    );
 }
+
+// --> The underlying JS function beneath the function App()
+// import React from "react";
+
+// function App() {
+//     return React.createElement('div', {className: 'container'}, React.createElement('h1', {}, 'My App'));
+// }
 
 export default App;
