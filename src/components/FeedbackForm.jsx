@@ -3,11 +3,11 @@ import Card from "./shared/Card";
 import Button from "./shared/Button";
 
 function FeedbackForm() {
-    const [text, setText] = useState('')
+  const [text, setText] = useState("");
 
-    const handleTextChange = (e) => {
-        setText(e.target.value)
-    }
+  const handleTextChange = (e) => {
+    setText(e.target.value);
+  };
 
   return (
     <Card>
@@ -15,8 +15,16 @@ function FeedbackForm() {
         <h2>How would rate our service with us?</h2>
         {/* @todo - ratinf select component */}
         <div className="input-group">
-          <input onChange={handleTextChange} type="text" placeholder="Write a review" value={text} />
-          <Button type="submit" version='primary'> Send </Button>
+          <input
+            onChange={handleTextChange}
+            type="text"
+            placeholder="Write a review"
+            value={text}
+          />
+          <Button type="submit" version="primary">
+            {" "}
+            Send{" "}
+          </Button>
         </div>
       </form>
     </Card>
