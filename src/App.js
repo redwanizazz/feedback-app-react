@@ -1,18 +1,27 @@
+import { useState } from 'react';
+import Header from "./components/Header";
+import FeedbackList from "./components/FeedbackList";
+import FeedbackStats from './components/FeedbackStats';
+import FeedbackData from './data/feedbackData';
 
-function App(){
+function App() {
+    const [feedback, setFeedback] = useState(FeedbackData)
+
+    const deleteFeedback = (id) => {
+        if (window.confirm('Are you sure?')) {
+            setFeedback(feedback.filter((item) => item.id !== id))
+        }
+    }
+
     return (
-        <div className='container'> //The word is class is reserved 
-                                     and as such className is used as an alternative.
-            <h1>My App</h1>
-        </div>
+        <>
+            <Header text="Feedback UI" bgColor="rgba(0, 0, 0, 0.4)" textColor="#ff6a95" />
+            <div className="container">
+                <FeedbackStats feedback={feedback} />
+                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+            </div>
+        </>
     );
 }
-
-// --> The underlying JS function beneath the function App()
-// import React from "react";
-
-// function App() {
-//     return React.createElement('div', {className: 'container'}, React.createElement('h1', {}, 'My App'));
-// }
 
 export default App;
