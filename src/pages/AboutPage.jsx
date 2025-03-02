@@ -11,7 +11,7 @@ function AboutPage() {
           <ul>
             <li style={{listStyleType: 'circle'}}>Collect user feedback along with ratings and append them to existing data.</li>
             <li style={{listStyleType: 'circle'}}>Display the total number of reviews and their average rating.</li>
-            <li style={{listStyleType: 'circle'}}>Allow feedback deletion for specific purposes, but restore them upon server restart.</li>
+            <li style={{listStyleType: 'circle'}}>Allow feedback deletion for specific purposes.</li>
           </ul>
           <p>Version: 1.0.0</p>
 
